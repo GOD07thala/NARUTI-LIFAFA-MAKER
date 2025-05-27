@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://telegram.im/img/@CampFlyOfficial" type="image/x-icon" />
+  <title>NarutoUzumaki Refer And Earn</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+    * {
+      margin: 0; padding: 0; outline: none; box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      height: 100vh; width: 100%;
+      background: linear-gradient(-115deg, #b621fe 10%, #1fd1f9 90%);
+      display: flex; align-items: center; justify-content: center; flex-direction: column;
+    }
+    .form {
+      width: 360px; background: #fff; padding: 20px;
+      border-radius: 10px; text-align: center;
+    }
+    .form h1 {
+      margin-bottom: 20px;
+    }
+    .input {
+      width: 88%; padding: 12px; margin: 10px 0;
+      border: 1px solid #ccc; border-radius: 20px; text-align: center;
+    }
+    .logbtn {
+      width: 70%; padding: 15px; margin: 15px 0;
+      border: none; border-radius: 30px;
+      background: linear-gradient(to right, #56d8e4, #008000);
+      color: white; font-weight: bold; cursor: pointer;
+      transition: 0.3s ease-in-out;
+    }
+    .logbtn:hover {
+      background-position: right;
+    }
+    .footer {
+      position: fixed; bottom: 0; width: 100%;
+      background: linear-gradient(to right, #de1afa, #26b9e4);
+      color: white; text-align: center;
+      padding: 10px; z-index: 99;
+    }
+    .footer img {
+      width: 35px; vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <div id='loader' class='center' style="display:none;">Loading...</div>
+
+  <div class="form" id="formSection">
+    <h1>Naruto</h1>
+    <h2>Naruto UZUMAKI Refer And Earn => <font color='red'>₹100</font></h2>
+    <input type="text" id="paytmInput" class="input" placeholder="Enter your Paytm number">
+    <button class="logbtn" onclick="generateLink()">Submit</button>
+
+    <div id="linkSection" style="display:none;">
+      <input type="text" id="refLink" class="input" readonly>
+      <button class="logbtn" onclick="copyLink()">Copy Your Refer Link</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="https://t.me/TEAM7PVB" target="_blank" style="color:white; text-decoration:none;">
+      <img src="https://TechAditya.xyz/Influenz/Tech.png" alt="Telegram Logo"> Join Our Channel
+    </a>
+  </div>
+
+  <script>
+    function generateLink() {
+      let number = document.getElementById('paytmInput').value;
+      if (!number) {
+        alert("Please enter a Paytm number.");
+        return;
+      }
+      let encoded = btoa(number);
+      let url = window.location.origin + "/Camp7/Camp.html?id=" + encoded;
+      document.getElementById('refLink').value = url;
+      document.getElementById('linkSection').style.display = 'block';
+    }
+
+    function copyLink() {
+      let copyText = document.getElementById("refLink");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Copied the text: " + copyText.value);
+    }
+  </script>
+
+</body>
+</html>
