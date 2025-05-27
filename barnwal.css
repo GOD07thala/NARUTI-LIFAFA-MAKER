@@ -1,0 +1,246 @@
+/**************promo welcome page css ********************/
+
+body {
+    background-color: #eef6fa;
+    color: #212529;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+}
+
+.s-shadow {
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .1);
+}
+
+.alert-cont {
+    padding: .75rem 1.25rem;
+}
+
+.alert {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    column-gap: 5px;
+}
+
+.alert-icon {
+    font-size: 24px;
+    height: 35px;
+    width: 35px;
+    border: 1px solid #856404;
+    border-radius: 100%;
+}
+
+.full-height {
+    height: calc(100vh - 41px);
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.content {
+    text-align: center;
+}
+
+.title h1 {
+    font-weight: 700;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+
+/******************* start promo offer page css ***************************/
+
+.promo-main-section {
+    background-color: #eef6fa;
+    color: #212529;
+    font-family: 'Nunito', sans-serif;
+    padding: 48px 0 25px;
+}
+
+.s-shadow {
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .1);
+}
+
+.site-logo {
+    position: absolute;
+    top: -30px;
+    padding: 5px 10px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    border-radius: .25rem;
+}
+
+.promo-block-title {
+    background-color: #212529;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .1);
+    padding: 15px;
+    font-weight: 700;
+    border-radius: .25rem .25rem 0 0;
+    color: #ffffff;
+}
+
+.promo-input .form-control {
+    background: #eef6fa;
+    border-radius: 30px 0 0 30px;
+    border: 3px solid #00c4cc;
+}
+
+.promo-input .form-control:focus {
+    box-shadow: none;
+}
+
+.promo-input .input-group-text {
+    cursor: pointer;
+    background-color: #00c4cc;
+    border-color: #00c4cc;
+    border-radius: 0 30px 30px 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+.bg-light {
+    background-color: #f7f7f7 !important;
+}
+
+.promo-hr {
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.promo-hr .promo-hr-icon {
+    height: 13px;
+    width: 13px;
+    border: 2px solid #dee6ed;
+    border-radius: 100%;
+    margin: auto;
+}
+
+.promo-hr .promo-hr-icon:after,
+.promo-hr .promo-hr-icon:before {
+    content: "";
+    border: .5px solid #dee6ed;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.promo-hr .promo-hr-icon:after {
+    left: 0;
+    right: 55%;
+}
+
+.promo-hr .promo-hr-icon:before {
+    left: 55%;
+    right: 0;
+}
+
+.promo-banner {
+    padding: 100px 0;
+    position: relative;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .1);
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: -webkit-linear-gradient(-180deg, #00c4cc, #7d2ae8);
+    color: #fff;
+}
+
+.promo-banner::before {
+    content: "";
+    background-image: -webkit-linear-gradient(-180deg, #00c4cc, #7d2ae8);
+    border-radius: .25rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .promo-banner {
+        padding: 50px 0;
+    }
+}
+
+.pro-banner-head {
+    display: flex;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.promo-offer-block {
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .1);
+    margin-top: calc(-10% - -10px);
+}
+
+.promo-list {
+    list-style-type: decimal;
+    font-size: 14px;
+    padding-left: 16px !important;
+}
+
+.promo-list li {
+    margin-bottom: 5px;
+}
+
+@media(max-width: 576px) {
+    .title h1 {
+        font-size: 1.8rem
+    }
+    h2,
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0 !important;
+    }
+    .site-logo img {
+        max-height: 30px !important;
+        height: unset;
+    }
+}
+
+.promo-bottom-bar {
+    background-color: #33abe0;
+    padding: 5px;
+    font-weight: 700;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+
+a.promo-bottom-bar:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media(max-width: 768px) {
+    .tele-promo {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        gap: 10px;
+        align-items: center;
+        text-align: justify
+    }
+}
+
+@media(max-width: 576px) {
+    .tele-promo {
+        font-size: 10px;
+    }
+}
+
+
+/******************* /end promo offer page css ***************************/
